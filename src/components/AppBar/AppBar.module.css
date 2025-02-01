@@ -1,0 +1,14 @@
+.header{
+    background-color: var(--dark-blue);
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.headBox{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+    gap: 24px;
+}
+

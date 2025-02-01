@@ -1,0 +1,25 @@
+.navlink {
+    color: var(--light);
+}
+
+.navList {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 50px;
+}
+
+
+@media screen and (min-width: 768px) {}
+@media screen and (min-width: 1280px) {
+  .nav{
+    gap: 588px;
+  }
+}

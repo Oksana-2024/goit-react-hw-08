@@ -1,0 +1,10 @@
+.nav {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  align-items: end;
+}
+
+.link {
+  color: var(--light);
+}
