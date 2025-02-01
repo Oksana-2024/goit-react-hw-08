@@ -1,0 +1,71 @@
+:root {
+  --dark-blue: #03093a;
+  --blue: #0000FF;
+  --font: "Arimo", sans-serif;
+  --light: #FFFFF0;
+  --shadow: rgb(3, 9, 58, .4);
+}
+
+@font-face {
+  font-family: "Arimo";
+  src: url("../src/assets/fonts/Arimo-VariableFont_wght.ttf") format("truetype");
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Arimo";
+  src: url("../src/assets/fonts/Arimo-VariableFont_wght.ttf") format("truetype");
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Arimo";
+  src: url("../src/assets/fonts/Arimo-VariableFont_wght.ttf") format("truetype");
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  font-family: var(--font);
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+textarea {
+  outline: none;
+}
+
+body{
+  background-color: var(--light);
+}
