@@ -1,0 +1,11 @@
+.box {
+  padding-top: 24px;
+}
+
+@media screen and (min-width: 768px) {
+}
+@media screen and (min-width: 1280px) {
+  .box {
+    padding-top: 52px;
+  }
+}
