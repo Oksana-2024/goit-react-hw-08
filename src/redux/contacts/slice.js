@@ -1,0 +1,56 @@
+import { createSlice } from "@reduxjs/toolkit";
+import { fetchContacts, addContact, deleteContact } from "./operations";
+import { logOutThunk } from "../auth/operations";
+
+const contacts = {
+  items: [],
+  loading: false,
+  error: null,
+};
+
+
+
+const handlePending = (state) => {
+  state.loading = true;
+};
+
+const handleRejected = (state, action) => {
+  state.loading = false;
+  state.error = action.payload;
+};
+
+const contactsSlice = createSlice({
+  name: "contacts",
+  initialState: contacts,
+  extraReducers: (builder) => {
+    builder
+      .addCase(fetchContacts.pending, handlePending)
+      .addCase(fetchContacts.fulfilled, (state, action) => {
+        state.loading = false;
+        state.error = null;
+        state.items = action.payload;
+      })
+      .addCase(fetchContacts.rejected, handleRejected)
+      .addCase(addContact.pending, handlePending)
+      .addCase(addContact.fulfilled, (state, action) => {
+        state.loading = false;
+        state.error = null;
+        state.items.push(action.payload);
+      })
+      .addCase(addContact.rejected, handleRejected)
+      .addCase(deleteContact.pending, handlePending)
+      .addCase(deleteContact.fulfilled, (state, action) => {
+        state.loading = false;
+        state.error = null;
+        state.items = state.items.filter(
+          (contacts) => contacts.id !== action.payload.id
+        );
+      })
+      .addCase(deleteContact.rejected, handleRejected)
+      .addCase(logOutThunk.fulfilled, (state) => {
+        state.items = [];
+      })
+  },
+});
+
+export default contactsSlice.reducer;
