@@ -1,10 +1,10 @@
 .navlink {
-    color: var(--light);
-    font-family: var(--font);
-    font-size: 18px;
+  color: var(--light);
+  font-family: var(--font);
+  font-size: 18px;
 }
 
-.active{
+.active {
   text-decoration-line: underline;
   color: var(--light-blue);
 }
@@ -29,27 +29,24 @@
   font-size: 18px;
 }
 
-.icon{
+.icon {
   fill: var(--light);
 }
 
-
 @media screen and (min-width: 768px) {
   .logo {
-    font-size: 24px;    
+    font-size: 24px;
   }
 
-  .link{
+  .link {
     gap: 8px;
   }
 }
 @media screen and (min-width: 1280px) {
   .logo {
-    font-size: 36px;    
+    font-size: 36px;
   }
 }
-
-
 
 @media screen and (min-width: 768px) {
   .navList {
@@ -57,7 +54,7 @@
     flex-direction: row;
     gap: 32px;
   }
-  
+
   .nav {
     display: flex;
     flex-direction: row;
@@ -67,10 +64,7 @@
   }
 }
 @media screen and (min-width: 1280px) {
-  .nav{
+  .nav {
     gap: 58px;
-  }
-  .link{
-    justify-content: center;
   }
 }
