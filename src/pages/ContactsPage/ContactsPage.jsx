@@ -15,13 +15,13 @@ const ContactsPage = () => {
   }, []);
 
   return (
-    <div>
+    <div style={{ paddingTop: "56px" }}>
       <Container>
-        <SearchBox/>
+        <SearchBox />
         <ContactForm />
         <ContactList />
       </Container>
-      <ModalContactComfirmDelete/>
+      <ModalContactComfirmDelete />
     </div>
   );
 };
