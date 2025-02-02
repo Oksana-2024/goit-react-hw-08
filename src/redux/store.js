@@ -6,18 +6,18 @@ import storage from "redux-persist/lib/storage";
 import { persistStore, persistReducer } from "redux-persist";
 
 const persistConfig = {
-  key: "contacts", // Ключ для сховища
+  key: "users", // Ключ для сховища
   storage, // Тип сховища
   whitelist: ["user", "token"], // Масив частин стану для збереження
 };
 
-const persistedReducer = persistReducer(persistConfig, contactsReducer);
+const persistedReducer = persistReducer(persistConfig, authReducer);
 
 const store = configureStore({
   reducer: {
-    contacts: persistedReducer,
+    contacts: contactsReducer,
     filters: filtersReducer,
-    auth: authReducer,
+    auth: persistedReducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({

@@ -22,10 +22,10 @@ export const registerThunk = createAsyncThunk(
     } catch (error) {
       if (error.response?.data.name === "MongoError") {
         if ("email" in error.response.data.keyValue) {
-          toast.error(`Користувач з такою поштою вже існує`);
+          toast.error("The user with this email already exists.");
         }
         if ("name" in error.response.data.keyValue) {
-          toast.error(`Такий користувач вже існує`);
+          toast.error("The user with this username already exists.");
         }
       }
       return thunkApi.rejectWithValue(error.message);

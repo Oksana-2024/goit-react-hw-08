@@ -1,9 +1,15 @@
 :root {
   --dark-blue: #03093a;
-  --blue: #0000FF;
+  --blue: #0000ff;
+  --light-blue: #1480f6;
+  --light: #fffff0;
+  --red: #e20c25;
+  --dark-red: #ad0d18;
+  --dark-red-rgb: rgb(173, 13, 24 0.4);
+  --green: #057f3c;
   --font: "Arimo", sans-serif;
-  --light: #FFFFF0;
-  --shadow: rgb(3, 9, 58, .4);
+  --shadow: rgb(3, 9, 58, 0.4);
+  --transform: ease-in-out;
 }
 
 @font-face {
@@ -66,6 +72,6 @@ textarea {
   outline: none;
 }
 
-body{
+body {
   background-color: var(--light);
 }
