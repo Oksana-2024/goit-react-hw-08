@@ -75,3 +75,9 @@ textarea {
 body {
   background-color: var(--light);
 }
+
+.not-found-page {
+  padding-top: 56px;
+  padding-bottom: 250px;
+  background-color: #fff;
+}

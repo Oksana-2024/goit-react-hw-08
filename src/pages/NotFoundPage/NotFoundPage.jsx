@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const NotFoundPage = () => {
   return (
-    <div style={{ paddingTop: "56px" }}>
+    <div className="not-found-page">
       <Container>
         <div
           style={{
