@@ -1,17 +1,31 @@
 .text {
-    margin-bottom: 6px;
+  margin-bottom: 6px;
+  font-family: var(--font);
+  color: var(--dark-blue);
+  font-size: 20px;
+}
+.searchInput {
+  width: 100%;
+  border-radius: 4px;
+  background-color: var(--light);
+  height: 40px;
+  border: 1px solid var(--dark-blue);
+  box-shadow: 6px 6px 2px 2px var(--shadow);
+  transition: border 250ms var(--transform);
+  padding: 6px 12px;
+  &:focus-visible {
+    border: 1px solid var(--light-blue);
   }
-  .searchInput {
-      width: 394px;
-      border-radius: 4px;
-      height: 32px;
-      border: 1px solid #b6bab8;
-      transform: border 250ms ;
-      &:focus-visible{
-          border: 1px solid #646565;
-      }
+}
+
+.searchBox {
+  padding: 24px 5px;
+}
+
+@media screen and (min-width: 768px) {
+  .text {
+    font-size: 24px;
   }
-  
-  .searchBox{
-      padding: 24px 0;
-  }
+}
+
+

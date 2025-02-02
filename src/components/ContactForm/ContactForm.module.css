@@ -1,29 +1,120 @@
 .formBox {
-    width: 390px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-radius: 4px;
+  padding: 16px 5px;
+  color: var(--dark-blue);
+  padding-bottom: 32px;
+  position: relative;
+}
+
+.container {
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+}
+
+.input {
+  width: 100%;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid var(--dark-blue);
+  color: var(--dark-blue);
+  padding: 6px 12px 6px 32px;
+  box-shadow: 6px 6px 2px 2px var(--shadow);
+  font-family: var(--font);
+  font-size: 14px;
+  background-color: var(--light);
+  margin-bottom: 6px;
+}
+
+.input::placeholder {
+  font-family: var(--font);
+  font-size: 14px;
+  color: var(--dark-blue);
+  opacity: 0.4;
+}
+
+.button {
+  font-family: var(--font);
+  font-size: 14px;
+  text-align: center;
+  width: 120px;
+  height: 40px;
+  background-color: var(--dark-blue);
+  color: var(--light);
+  border-radius: 4px;
+  box-shadow: 6px 6px 2px 2px var(--shadow);
+}
+
+.divError {
+  height: 18px;
+  color: var(--red);
+  opacity: 0.7;
+  font-family: var(--font);
+  font-size: 12px;
+}
+
+.iconPerson {
+  position: absolute;
+  top: 23px;
+  left: 10px;
+  fill: var(--dark-blue);
+}
+
+.iconPhone {
+  position: absolute;
+  top: 97px;
+  left: 10px;
+  fill: var(--dark-blue);
+}
+
+.divButton {
+  display: flex;
+  flex-direction: row;
+}
+
+.comfirmBtn {
+  margin-right: auto;
+}
+
+.submitBtn {
+  margin-left: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .button {
+    width: 30%;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .formBox {
+    gap: 16px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 16px;
+  }
+  .inputContainer {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    border: 1px solid #000;
-    border-radius: 4px;
-    padding: 16px 5px;
+    gap: 6px;
   }
-  
-  .input {
-    width: 98%;
-    height: 40px;
-    border-radius: 4px;
-    border: 1px solid #646565;
+
+  .iconPerson {
+    top: 30px;
+    left: 10px;
   }
-  
-  .button {
-    width: 45%;
-    height: 40px;
-    border: 1px solid #b6bab8;
-    border-radius: 4px;
-    margin-right: auto;
-    margin-left: auto;
+
+  .iconPhone {
+    top: 30px;
+    left: 620px;
   }
-  
-  .textError{
-    color: crimson;
-  }
+}

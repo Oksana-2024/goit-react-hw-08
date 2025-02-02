@@ -1,5 +1,3 @@
-//import s from './RegistrationForm.module.css'
-
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import s from "./RegistrationForm.module.css";
 import { useDispatch } from "react-redux";
@@ -50,39 +48,36 @@ const RegistrationForm = () => {
           <h2>Sign Up</h2>
           <label className={s.label}>
             Name
-            <Field className={s.field} type="text" name="name" />
-            <ErrorMessage
-              className={s.textError}
-              name="name"
-              component="span"
-            />
+            <Field className={s.field} type="text" name="name" autoFocus />
+            <div className={s.textError}>
+              <ErrorMessage name="name" component="div" />
+            </div>
           </label>
           <label className={s.label}>
             Email
             <Field className={s.field} type="email" name="email" />
-            <ErrorMessage
-              className={s.textError}
-              name="email"
-              component="span"
-            />
+            <div className={s.textError}>
+              <ErrorMessage name="email" component="span" />
+            </div>
           </label>
           <label className={s.label}>
             Password
             <Field className={s.field} type="password" name="password" />
-            <ErrorMessage
-              className={s.textError}
-              name="password"
-              component="span"
-            />
+            <div className={s.textError}>
+              <ErrorMessage name="password" component="div" />
+            </div>
           </label>
           <button className={s.button} type="submit">
             Sign up
           </button>
+          <div className={s.text}>
+            Already have an account?
+            <Link className={s.text} to="/login">
+              Log in.
+            </Link>
+          </div>
         </Form>
       </Formik>
-      <p className={s.text}>
-        Already have an account? <Link to="/login"> Log in.</Link>
-      </p>
     </>
   );
 };

@@ -1,7 +1,26 @@
-.wraper{
-    color: var(--light);
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.username{
-    color: var(--light);
+.username {
+  color: var(--light);
+  font-family: var(--font);
+  font-size: 18px;
+}
+
+.button {
+  color: var(--light);
+  font-size: 18px;
+  background-color: transparent;
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper {
+    justify-content: end;
+    gap: 96px;
+  }
 }

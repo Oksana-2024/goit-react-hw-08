@@ -10,7 +10,7 @@ const UserMenu = () => {
   return (
     <div className={s.wrapper}>
       <p className={s.username}>Welcome, {user.name}</p>
-      <button type="button" onClick={() => dispatch(logOutThunk())}>
+      <button className={s.button} type="button" onClick={() => dispatch(logOutThunk())}>
         Log out
       </button>
     </div>

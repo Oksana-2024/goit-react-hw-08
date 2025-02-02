@@ -1,20 +1,74 @@
-.buttonDel {
-    padding: 6px 10px;
-    font-size: 18px;
-    border-radius: 6px;
-    border: 1px solid #646565;
-    width: 100px;
-  }
-  
-  .box {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    align-items: center;
-  }
-  
-  .contactContainer {
-    display: flex;
+.box {
+  display: flex;
+  flex-direction: row;
+  gap: 18px;
+  align-items: center;
+  width: 100%;
+}
+
+.contactContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.contactsWraper {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  width: 100%;
+}
+
+.buttonWraper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.button {
+  background-color: transparent;
+  background-color: var(--dark-blue);
+  color:  var(--light);
+  text-align: center;
+  width: 90px;
+  height: 30px;
+  font-family: var(--font);
+  font-size: 14px;
+  border-radius: 4px;
+  box-shadow: 4px 4px 1px 0px var(--shadow);
+}
+
+.icon {
+  fill: var(--dark-blue);
+}
+
+.text {
+  font-family: var(--font);
+  font-size: 18px;
+  font-weight: 500;
+}
+
+@media screen and (min-width: 768px) {
+  .contactsWraper{
     flex-direction: column;
-    gap: 16px;
+    gap: 18px;
   }
+  
+  .button{
+    width: 75%;
+  }
+  
+}
+
+@media screen and (min-width: 768px) {
+  .buttonWraper{
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .button{
+    width: 40%;
+  }
+}
