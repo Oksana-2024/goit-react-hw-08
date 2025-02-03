@@ -71,7 +71,7 @@ const RegistrationForm = () => {
             Sign up
           </button>
           <div className={s.text}>
-            Already have an account?
+            Already have an account?{" "}
             <Link className={s.text} to="/login">
               Log in.
             </Link>
